@@ -22,12 +22,21 @@ button {
 }
 
 #button-div {
-    position: fixed;
-    bottom: 60%;
-    right: 27%;
     width: 600px;
 }
+.button-gif {
+    text-align: center;
+}
+
 
 body {
     background-color: whitesmoke;
+
+}
+
+img {
+
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
