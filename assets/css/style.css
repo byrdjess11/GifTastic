@@ -7,7 +7,7 @@
 }
 
 .titletwo {
-    font-size: 35px;
+    font-size: 22px;
     color:red;
     text-align: center;
     font-weight: bold;
@@ -21,22 +21,25 @@ button {
     font-family: 'Times New Roman', Times, serif;
 }
 
-#button-div {
-    width: 600px;
-}
-.button-gif {
-    text-align: center;
+.container {
+    position: relative;
+    left: 35%;
+    height: fit-content;
 }
 
+#buttons-div {
+    width: 450px;
+}
+
+#gif-div {
+    width: 500px;
+    height: 250px;
+    background-color: #eee;
+    overflow: scroll;
+}
 
 body {
     background-color: whitesmoke;
-
 }
 
-img {
 
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}

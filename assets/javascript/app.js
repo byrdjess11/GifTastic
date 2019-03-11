@@ -45,7 +45,7 @@ function renderButtons() {
 
   for (var i = 0; i < topics.length; i++) {
 
-    var btn = $("<button>");
+    var btn = $("<button> <br>");
 
     btn.addClass("happy-btn");
     btn.attr("happy-data", topics[i]);
