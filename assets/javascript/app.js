@@ -2,6 +2,7 @@ var topics = ["cookies", "babies", "puppies", "smiling", "dancing", "pizza", "ba
 
 function happyInfo() {
 
+
     var topic = $(this).attr("happy-data");
     var queryURL = "https://api.giphy.com/v1/gifs/search?q=" +
         topic + "&api_key=T6UUxMapGH667fntbj2AmXuR24SEeQ91&limit=10";
@@ -9,31 +10,32 @@ function happyInfo() {
         $.ajax({
             url: queryURL,
             method: "GET"
-          }).then(function(results) {
+          }).then(function(response) {
 
-
-            var results = response.data;
-
-            console.log(results)
-            
+            for(var i = 0; i < topic.length; i++) {
             var happyDiv = $("<div>");
 
-            var rating = results.rating;
+            var rating = response.data[i].rating;
 
             var p = $("<p>").text("Rated: "  + rating);
 
             happyDiv.append(p);
 
-            var imgUrl = results.images.fixed_height.url;
+            var imgUrl = response.data[i].images.preview_gif.url;
+
+            console.log(imgUrl);
 
             var image = $("<img>").attr("src", imgUrl);
 
-            p.append(image);
+            happyDiv.append(image);
 
             $("#gif-div").prepend(happyDiv);
 
+            }
+
       
           });
+
         
         }
 
@@ -70,6 +72,8 @@ function renderButtons() {
   $(document).on("click", ".happy-btn", happyInfo);
 
   renderButtons();
+  
+
 
 
 
