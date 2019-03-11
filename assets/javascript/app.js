@@ -1,6 +1,6 @@
 var topics = ["cookies", "babies", "puppies", "smiling", "dancing", "pizza", "babygroot"];
 
-$("button").on("click", function() {
+$("button").on("click", function happyInfo() {
 
 
     var happyStuff = $(this).attr("data-happy");
@@ -51,3 +51,7 @@ $("button").on("click", function() {
       
 
 });
+
+
+
+
